@@ -1,34 +1,33 @@
+""" Created by Anjaszz """
+
 import os
 import platform
 
 todo_list = []
-
+ 
+#Fungsi Membersihkan layar tergantung pada sistem operasi
 def clear_screen():
-    """Membersihkan layar tergantung pada sistem operasi"""
     if platform.system() == "Windows":
         os.system("cls")
     else:
         os.system("clear")
-
+#Fungsi Menampilkan semua tugas dalam daftar
 def display_tasks():
-    """Menampilkan semua tugas dalam daftar"""
     if not todo_list:
         print("Daftar tugas kosong.")
     else:
         print("\nDaftar Tugas:")
         for i, task in enumerate(todo_list, start=1):
             print(f"{i}. {task}")
-
+#Fungsi Menambahkan tugas baru ke daftar 
 def add_task(task):
-    """Menambahkan tugas baru ke daftar"""
     if any(task in t for t in todo_list):
-        print(f"Tugas '{task}' sudah ada dalam daftar.")
+        print(f"\nTugas '{task}' sudah ada dalam daftar.")
     else:
         todo_list.append(task)
         print(f"Tugas '{task}' telah ditambahkan.")
-
+#Fungsi Menghapus tugas dari daftar
 def remove_task(task_index):
-    """Menghapus tugas dari daftar berdasarkan indeks atau menghapus semua tugas jika input 'x'"""
     if task_index == 'x':
         todo_list.clear()
         print("Semua tugas telah dihapus.")
@@ -38,9 +37,9 @@ def remove_task(task_index):
             print(f"Tugas '{removed_task}' telah dihapus.")
         except (IndexError, ValueError):
             print("Indeks tugas tidak valid atau tidak ada.")
-
+            
+#Fungsi untuk Menandai tugas sebagai selesai
 def mark_task_completed(task_index):
-    """Menandai tugas sebagai selesai"""
     try:
         task = todo_list[task_index - 1]
         if " (selesai)" in task:
@@ -51,8 +50,8 @@ def mark_task_completed(task_index):
     except IndexError:
         print("Indeks tugas tidak valid.")
 
+#Fungsi utama untuk menjalankan aplikasi
 def main():
-    """Fungsi utama untuk menjalankan aplikasi"""
     while True:
         clear_screen()
         print("\n--- Menu ---")
@@ -91,7 +90,7 @@ def main():
                 print("Masukkan nomor tugas yang valid.")
             input("Tekan Enter untuk kembali ke menu...")
         elif choice == '5':
-            print("Keluar dari aplikasi.")
+            print("Keluar dari program.")
             break
         else:
             print("Pilihan tidak valid. Silakan pilih antara 1 hingga 5.")
