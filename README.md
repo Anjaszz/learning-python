@@ -1,14 +1,14 @@
-# Proyek Multi-Program: Todo App, Chatbot tentang Python, dan Adventure Game
+# Learning python
 
 ## Daftar Isi
-1. [Deskripsi Proyek](#deskripsi-proyek)
+1. [Deskripsi Repositori](#deskripsi-repositori)
 2. [Program 1: Todo App](#program-1-todo-app)
 3. [Program 2: Chatbot Tentang Python](#program-2-chatbot-tentang-python)
 4. [Program 3: Adventure Game](#program-3-adventure-game)
 5. [Cara menjalankan](#install)
 6. [Kontribusi](#kontribusi)
 
-## Deskripsi Proyek
+## Deskripsi Repositori
 Repositori ini berisi hasil belajar Python, berikut adalah beberapa program yang ada:
 
 1. **Todo App** - Aplikasi daftar tugas sederhana yang memungkinkan pengguna untuk menambah, menghapus, dan menandai tugas sebagai selesai.
